@@ -1,7 +1,7 @@
 {
-  "name": "@wildebeest/common",
-  "version": "0.2.1",
-  "description": "Common services and tools for other modules",
+  "name": "@wildebeest/component",
+  "version": "0.1.0",
+  "description": "Components",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pipan/js-common.git"
+    "url": "git+https://github.com/pipan/js-component.git"
   },
   "dependencies": {
     "@wildebeest/js-modules": "^0.1.0",
@@ -25,17 +25,12 @@
   "keywords": [
     "js",
     "modules",
-    "common",
-    "service",
-    "tools",
-    "event",
-    "dom",
-    "viewport"
+    "component"
   ],
   "author": "Peter Gasparik",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pipan/js-common/issues"
+    "url": "https://github.com/pipan/js-component/issues"
   },
-  "homepage": "https://github.com/pipan/js-common#readme"
+  "homepage": "https://github.com/pipan/js-component#readme"
 }
