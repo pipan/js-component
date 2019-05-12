@@ -14,7 +14,7 @@ var ComponentBindService = (function () {
     ComponentBindService.prototype.addBinder = function (name, binder) {
         this.binders[name] = binder;
     };
-    ComponentBindService.prototype.bindToElement = function (element) {
+    ComponentBindService.prototype.autoBind = function (element) {
         var result = new Map();
         for (var key in this.binders) {
             var selectedElements = element.querySelectorAll(this.binders[key].selector);
@@ -26,6 +26,12 @@ var ComponentBindService = (function () {
             result.set(key, components);
         }
         return result;
+    };
+    ComponentBindService.prototype.bindToElement = function (element, component) {
+        if (!element.wbComponents) {
+            element.wbComponents = [];
+        }
+        element.wbComponents.push(component);
     };
     ComponentBindService = __decorate([
         inversify_1.injectable()

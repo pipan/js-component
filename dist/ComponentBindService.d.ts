@@ -11,5 +11,6 @@ export declare class ComponentBindService {
         selector: string;
         binder: ComponentBinder;
     }): void;
-    bindToElement(element: HTMLElement): Map<string, Array<Component>>;
+    autoBind(element: HTMLElement): Map<string, Array<Component>>;
+    bindToElement(element: any, component: Component): void;
 }

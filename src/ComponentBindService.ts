@@ -12,7 +12,7 @@ export class ComponentBindService
         this.binders[name] = binder;
     }
 
-    public bindToElement(element: HTMLElement): Map<string, Array<Component>>
+    public autoBind(element: HTMLElement): Map<string, Array<Component>>
     {
         let result: Map<string, Array<Component>> = new Map();
         for (let key in this.binders) {
@@ -25,5 +25,13 @@ export class ComponentBindService
             result.set(key, components);
         }
         return result;
+    }
+
+    public bindToElement(element: any, component: Component): void
+    {
+        if (!element.wbComponents) {
+            element.wbComponents = [];
+        }
+        element.wbComponents.push(component);
     }
 }
