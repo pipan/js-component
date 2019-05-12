@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var ComponentBindService_1 = require("./ComponentBindService");
 var common_1 = require("@wildebeest/common");
+var ElementService_1 = require("./ElementService");
 var ComponentModule = (function () {
     function ComponentModule() {
     }
@@ -20,6 +21,7 @@ var ComponentModule = (function () {
             };
         });
         container.bind(ComponentBindService_1.ComponentBindService).toSelf().inSingletonScope();
+        container.bind(ElementService_1.ElementService).toSelf().inSingletonScope();
     };
     ComponentModule.prototype.boot = function (container) { };
     return ComponentModule;

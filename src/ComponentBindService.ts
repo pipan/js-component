@@ -26,12 +26,4 @@ export class ComponentBindService
         }
         return result;
     }
-
-    public bindToElement(element: any, component: Component): void
-    {
-        if (!element.wbComponents) {
-            element.wbComponents = [];
-        }
-        element.wbComponents.push(component);
-    }
 }

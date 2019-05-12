@@ -63,17 +63,3 @@ test("auto binding", () => {
     expect(components.get('test')).toBeDefined();
     expect(components.get('test').length).toEqual(1);
 });
-
-test("binding HTML element to component", () => {
-    componentBindService.addBinder('test', {
-        selector: '.test',
-        binder: new TestComponentBinder(emitterService)
-    });
-    
-    let element: any = domService.create('<div class="test"></div>');
-    let component: Component = new TestComponent(element, emitterService.createEmitter());
-    bindService.bindToElement(element, component);
-
-    expect(element.wbComponents).toBeDefined();
-    expect(element.wbComponents.length).toEqual(1);
-});

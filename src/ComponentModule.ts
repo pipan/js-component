@@ -4,6 +4,7 @@ import { ComponentBuilder } from "./ComponentBuilder";
 import { ComponentBinder } from "./ComponentBinder";
 import { ComponentBindService } from "./ComponentBindService";
 import { CommonModule } from "@wildebeest/common";
+import { ElementService } from "./ElementService";
 
 export class ComponentModule implements Module
 {
@@ -25,6 +26,7 @@ export class ComponentModule implements Module
             }
         });
         container.bind<ComponentBindService>(ComponentBindService).toSelf().inSingletonScope();
+        container.bind<ElementService>(ElementService).toSelf().inSingletonScope();
     }
 
     boot(container: Container): void {}

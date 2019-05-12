@@ -27,12 +27,6 @@ var ComponentBindService = (function () {
         }
         return result;
     };
-    ComponentBindService.prototype.bindToElement = function (element, component) {
-        if (!element.wbComponents) {
-            element.wbComponents = [];
-        }
-        element.wbComponents.push(component);
-    };
     ComponentBindService = __decorate([
         inversify_1.injectable()
     ], ComponentBindService);
